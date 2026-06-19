@@ -1,0 +1,2 @@
+cluster_name,resource_group_name,location,dns_prefix,kubernetes_version,sku_tier,private_cluster_enabled,system_node_pool_name,system_node_vm_size,system_node_count,network_rg,vnet_name,system_subnet_name,monitor_name,acr_name
+aks-ai-dev-krc,rg-ai-aks-krc,koreacentral,aks-ai-dev-krc,,Free,false,sys,Standard_E2bds_v5,1,rg-ai-network-krc,vnet-ai-dev-krc,snet-aks-system,log-ai-aks-dev-krc,acraidevkrc001

@@ -1,0 +1,8 @@
+enabled,group_name,scope_type,resource_group_name,scope_resource_id,role_definition_name,description
+true,SG-AZ-PLATFORM-ADMINS,subscription,,,Owner,Lab subscription owner. Production should move to PIM Eligible.
+true,SG-AZ-SECURITY-OPS,subscription,,,Security Reader,Security posture and Defender read access.
+true,SG-AZ-SECURITY-OPS,subscription,,,Reader,Read all Azure resource configurations.
+true,SG-AZ-READERS,subscription,,,Reader,General read-only access.
+true,SG-AZ-AKS-OPERATORS,subscription,,,Monitoring Reader,Monitoring and metrics view.
+false,SG-AZ-AKS-DEV-DEVELOPERS,resource_group,rg-ai-aks-krc,,Contributor,Optional Dev RG contributor for lab only.
+false,SG-AZ-AI-DATA-ENGINEERS,resource_group,rg-ai-data-krc,,Storage Blob Data Contributor,Optional data RG access.

@@ -1,0 +1,2 @@
+resource_group_name,location,environment,owner,description
+rg-ai-aks-krc,koreacentral,dev,platform,AKS and AI runtime resource group.

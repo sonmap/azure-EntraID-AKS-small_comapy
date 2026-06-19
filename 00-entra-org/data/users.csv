@@ -1,0 +1,31 @@
+user_key,display_name,given_name,surname,user_principal_name,mail_nickname,user_type,department,job_title,usage_location,account_enabled,force_password_change
+admin01,Admin 01 Platform,Admin01,Platform,admin01,admin01,Power,Cloud Platform,Platform Administrator,KR,true,true
+admin02,Admin 02 Platform,Admin02,Platform,admin02,admin02,Power,Cloud Platform,Platform Administrator,KR,true,true
+sec01,Security 01 Ops,Security01,Ops,sec01,sec01,Power,Security,Security Operator,KR,true,true
+sec02,Security 02 Ops,Security02,Ops,sec02,sec02,Power,Security,Security Operator,KR,true,true
+sec03,Security 03 Ops,Security03,Ops,sec03,sec03,Power,Security,Security Operator,KR,true,true
+ops01,AKS 01 Operator,AKS01,Operator,ops01,ops01,Power,Cloud Operations,AKS Operator,KR,true,true
+ops02,AKS 02 Operator,AKS02,Operator,ops02,ops02,Power,Cloud Operations,AKS Operator,KR,true,true
+ops03,AKS 03 Operator,AKS03,Operator,ops03,ops03,Power,Cloud Operations,AKS Operator,KR,true,true
+dev01,AI 01 Developer,AI01,Developer,dev01,dev01,Power,AI Development,AI Developer,KR,true,true
+dev02,AI 02 Developer,AI02,Developer,dev02,dev02,Power,AI Development,AI Developer,KR,true,true
+dev03,AI 03 Developer,AI03,Developer,dev03,dev03,Power,AI Development,AI Developer,KR,true,true
+dev04,AI 04 Developer,AI04,Developer,dev04,dev04,Power,AI Development,AI Developer,KR,true,true
+dev05,AI 05 Developer,AI05,Developer,dev05,dev05,Power,AI Development,AI Developer,KR,true,true
+data01,Data 01 Engineer,Data01,Engineer,data01,data01,Power,Data Platform,Data Engineer,KR,true,true
+data02,Data 02 Engineer,Data02,Engineer,data02,data02,Power,Data Platform,Data Engineer,KR,true,true
+data03,Data 03 Engineer,Data03,Engineer,data03,data03,Power,Data Platform,Data Engineer,KR,true,true
+casual01,Casual 01 User,Casual01,User,casual01,casual01,Casual,Business,AI Application User,KR,true,true
+casual02,Casual 02 User,Casual02,User,casual02,casual02,Casual,Business,AI Application User,KR,true,true
+casual03,Casual 03 User,Casual03,User,casual03,casual03,Casual,Business,AI Application User,KR,true,true
+casual04,Casual 04 User,Casual04,User,casual04,casual04,Casual,Business,AI Application User,KR,true,true
+casual05,Casual 05 User,Casual05,User,casual05,casual05,Casual,Business,AI Application User,KR,true,true
+casual06,Casual 06 User,Casual06,User,casual06,casual06,Casual,Business,AI Application User,KR,true,true
+casual07,Casual 07 User,Casual07,User,casual07,casual07,Casual,Business,AI Application User,KR,true,true
+casual08,Casual 08 User,Casual08,User,casual08,casual08,Casual,Business,AI Application User,KR,true,true
+casual09,Casual 09 User,Casual09,User,casual09,casual09,Casual,Business,AI Application User,KR,true,true
+casual10,Casual 10 User,Casual10,User,casual10,casual10,Casual,Business,AI Application User,KR,true,true
+casual11,Casual 11 User,Casual11,User,casual11,casual11,Casual,Business,AI Application User,KR,true,true
+casual12,Casual 12 User,Casual12,User,casual12,casual12,Casual,Business,AI Application User,KR,true,true
+casual13,Casual 13 User,Casual13,User,casual13,casual13,Casual,Business,AI Application User,KR,true,true
+casual14,Casual 14 User,Casual14,User,casual14,casual14,Casual,Business,AI Application User,KR,true,true

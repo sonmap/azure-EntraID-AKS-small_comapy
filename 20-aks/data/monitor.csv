@@ -1,0 +1,2 @@
+monitor_name,resource_group_name,location,retention_in_days
+log-ai-aks-dev-krc,rg-ai-aks-krc,koreacentral,30

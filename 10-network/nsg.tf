@@ -1,0 +1,47 @@
+resource "azurerm_network_security_group" "nsg" {
+  for_each = local.nsgs
+
+  name                = each.value.nsg_name
+  location            = each.value.location
+  resource_group_name = each.value.resource_group_name
+
+  tags = {
+    managed_by  = "terraform"
+    description = each.value.description
+  }
+
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
+}
+
+resource "azurerm_network_security_rule" "rule" {
+  for_each = local.nsg_rules
+
+  name                        = each.value.rule_name
+  priority                    = tonumber(each.value.priority)
+  direction                   = each.value.direction
+  access                      = each.value.access
+  protocol                    = each.value.protocol
+  source_port_range           = each.value.source_port_range
+  destination_port_range      = each.value.destination_port_range
+  source_address_prefix       = each.value.source_address_prefix
+  destination_address_prefix  = each.value.destination_address_prefix
+  resource_group_name         = local.nsgs[each.value.nsg_name].resource_group_name
+  network_security_group_name = each.value.nsg_name
+  description                 = each.value.description
+
+  depends_on = [
+    azurerm_network_security_group.nsg
+  ]
+}
+
+resource "azurerm_subnet_network_security_group_association" "assoc" {
+  for_each = {
+    for k, s in local.subnets : k => s
+    if length(trimspace(s.nsg_name)) > 0
+  }
+
+  subnet_id                 = azurerm_subnet.subnet[each.key].id
+  network_security_group_id = azurerm_network_security_group.nsg[each.value.nsg_name].id
+}

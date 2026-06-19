@@ -1,0 +1,2 @@
+acr_name,resource_group_name,location,sku,admin_enabled
+acraidevkrc001,rg-ai-aks-krc,koreacentral,Basic,false

@@ -1,0 +1,5 @@
+nsg_name,resource_group_name,location,description
+nsg-aks-system,rg-ai-network-krc,koreacentral,NSG for AKS system nodes
+nsg-aks-user,rg-ai-network-krc,koreacentral,NSG for AKS user nodes
+nsg-private-endpoint,rg-ai-network-krc,koreacentral,NSG for Private Endpoints
+nsg-ingress,rg-ai-network-krc,koreacentral,NSG for ingress subnet

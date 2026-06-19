@@ -1,0 +1,11 @@
+group_name,description,security_enabled,mail_enabled,category
+SG-AZ-PLATFORM-ADMINS,Platform administrators. Lab: Owner. Production: use PIM Eligible Owner.,true,false,Admin
+SG-AZ-SECURITY-OPS,"Security operations read-only group for Defender, security posture, and logs.",true,false,Security
+SG-AZ-AKS-OPERATORS,AKS operations group for cluster user access and monitoring operations.,true,false,AKS
+SG-AZ-AKS-DEV-DEVELOPERS,AKS developers for AI dev and test namespaces.,true,false,AKS
+SG-AZ-AKS-READERS,AKS read-only users.,true,false,AKS
+SG-AZ-AI-POWER-USERS,"AI power users such as AI developers, data engineers, platform/security operators.",true,false,AI
+SG-AZ-AI-CASUAL-USERS,AI application casual users. No Azure Portal or kubectl access by default.,true,false,AI
+SG-AZ-AI-DATA-ENGINEERS,Data engineers for AI datasets and pipelines.,true,false,AI
+SG-AZ-AI-APP-USERS,AI web/chat application users.,true,false,AI
+SG-AZ-READERS,General read-only Azure resource readers.,true,false,Common

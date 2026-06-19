@@ -1,0 +1,5 @@
+enabled,cluster_name,group_name,role_definition_name,description
+true,aks-ai-dev-krc,SG-AZ-PLATFORM-ADMINS,Azure Kubernetes Service RBAC Cluster Admin,Cluster admin through Azure RBAC.
+true,aks-ai-dev-krc,SG-AZ-AKS-OPERATORS,Azure Kubernetes Service Cluster User Role,Cluster user credentials for operators.
+true,aks-ai-dev-krc,SG-AZ-AKS-DEV-DEVELOPERS,Azure Kubernetes Service Cluster User Role,Cluster user credentials for developers.
+true,aks-ai-dev-krc,SG-AZ-AKS-READERS,Azure Kubernetes Service RBAC Reader,Read-only AKS RBAC role.

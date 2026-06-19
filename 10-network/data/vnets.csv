@@ -1,0 +1,2 @@
+vnet_name,resource_group_name,location,address_space,dns_servers,description
+vnet-ai-dev-krc,rg-ai-network-krc,koreacentral,10.40.0.0/16,,AI AKS VNet

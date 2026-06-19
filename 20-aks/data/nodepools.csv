@@ -1,0 +1,2 @@
+cluster_name,node_pool_name,mode,vm_size,node_count,min_count,max_count,os_disk_size_gb,network_rg,vnet_name,subnet_name,enable_auto_scaling
+aks-ai-dev-krc,aiuser,User,Standard_E2bds_v5,1,1,1,64,rg-ai-network-krc,vnet-ai-dev-krc,snet-aks-user,true

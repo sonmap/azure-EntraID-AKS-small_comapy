@@ -1,0 +1,5 @@
+subnet_name,vnet_name,resource_group_name,address_prefixes,nsg_name,purpose
+snet-aks-system,vnet-ai-dev-krc,rg-ai-network-krc,10.40.1.0/24,nsg-aks-system,AKS system node subnet
+snet-aks-user,vnet-ai-dev-krc,rg-ai-network-krc,10.40.2.0/23,nsg-aks-user,AKS user node subnet
+snet-private-endpoint,vnet-ai-dev-krc,rg-ai-network-krc,10.40.4.0/24,nsg-private-endpoint,Private Endpoint subnet
+snet-ingress,vnet-ai-dev-krc,rg-ai-network-krc,10.40.5.0/24,nsg-ingress,Ingress/Application Gateway subnet

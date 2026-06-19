@@ -1,0 +1,6 @@
+nsg_name,rule_name,priority,direction,access,protocol,source_port_range,destination_port_range,source_address_prefix,destination_address_prefix,description
+nsg-ingress,Allow-Https-Inbound,100,Inbound,Allow,Tcp,*,443,Internet,*,Allow HTTPS to ingress subnet.
+nsg-ingress,Allow-Http-Inbound,110,Inbound,Allow,Tcp,*,80,Internet,*,Allow HTTP to ingress subnet for lab/testing.
+nsg-aks-system,Allow-VNet-Inbound,100,Inbound,Allow,*,*,*,VirtualNetwork,VirtualNetwork,Allow VNet internal traffic.
+nsg-aks-user,Allow-VNet-Inbound,100,Inbound,Allow,*,*,*,VirtualNetwork,VirtualNetwork,Allow VNet internal traffic.
+nsg-private-endpoint,Deny-Internet-Inbound,4096,Inbound,Deny,*,*,*,Internet,*,Deny inbound from Internet.

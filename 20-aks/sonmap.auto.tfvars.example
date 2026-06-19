@@ -1,0 +1,17 @@
+tenant_id       = "<TENANT_ID>"
+subscription_id = "<SUBSCRIPTION_ID>"
+
+# 00-entra-org terraform output aks_tfvars_object_ids 값을 반영하세요.
+aks_admin_group_object_ids = [
+  "<SG-AZ-PLATFORM-ADMINS_OBJECT_ID>"
+]
+
+entra_group_object_ids = {
+  "SG-AZ-PLATFORM-ADMINS"      = "<SG-AZ-PLATFORM-ADMINS_OBJECT_ID>"
+  "SG-AZ-AKS-OPERATORS"       = "<SG-AZ-AKS-OPERATORS_OBJECT_ID>"
+  "SG-AZ-AKS-DEV-DEVELOPERS"  = "<SG-AZ-AKS-DEV-DEVELOPERS_OBJECT_ID>"
+  "SG-AZ-AKS-READERS"         = "<SG-AZ-AKS-READERS_OBJECT_ID>"
+  "SG-AZ-SECURITY-OPS"        = "<SG-AZ-SECURITY-OPS_OBJECT_ID>"
+}
+
+enable_aks_azure_rbac_assignments = true

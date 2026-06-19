@@ -1,0 +1,8 @@
+enabled,namespace,binding_name,role_name,group_name,description
+true,ai-dev,rb-ai-dev-developers,ai-developer,SG-AZ-AKS-DEV-DEVELOPERS,Developers can deploy to ai-dev.
+true,ai-test,rb-ai-test-developers,ai-developer,SG-AZ-AKS-DEV-DEVELOPERS,Developers can deploy to ai-test.
+true,ai-dev,rb-ai-dev-operators,ai-operator,SG-AZ-AKS-OPERATORS,Operators manage ai-dev.
+true,ai-test,rb-ai-test-operators,ai-operator,SG-AZ-AKS-OPERATORS,Operators manage ai-test.
+true,ai-prod,rb-ai-prod-operators,ai-operator,SG-AZ-AKS-OPERATORS,Operators read production namespace.
+true,ai-prod,rb-ai-prod-readers,ai-reader,SG-AZ-AKS-READERS,Readers can view production namespace.
+true,ai-prod,rb-ai-prod-security,ai-reader,SG-AZ-SECURITY-OPS,Security can view production namespace.

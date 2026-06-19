@@ -1,0 +1,4 @@
+enabled,cluster_name,namespace,label_env,label_owner,description
+true,aks-ai-dev-krc,ai-dev,dev,ai,AI development namespace
+true,aks-ai-dev-krc,ai-test,test,ai,AI test namespace
+true,aks-ai-dev-krc,ai-prod,prod,ai,AI production namespace in lab cluster

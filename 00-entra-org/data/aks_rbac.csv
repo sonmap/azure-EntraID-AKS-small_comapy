@@ -1,0 +1,6 @@
+enabled,group_name,aks_scope,role_name,description
+true,SG-AZ-PLATFORM-ADMINS,cluster,cluster-admin,AKS admin group object id for cluster admin.
+true,SG-AZ-AKS-OPERATORS,cluster-namespace,operator,AKS operator group.
+true,SG-AZ-AKS-DEV-DEVELOPERS,namespace,developer,AKS developer group for dev/test namespaces.
+true,SG-AZ-AKS-READERS,namespace,reader,AKS read-only group.
+true,SG-AZ-SECURITY-OPS,logs,security-reader,AKS security and log reader group.

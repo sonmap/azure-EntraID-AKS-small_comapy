@@ -1,0 +1,13 @@
+enabled,namespace,role_name,api_groups,resources,verbs,description
+true,ai-dev,ai-developer,,pods|pods/log|services|configmaps|secrets,get|list|watch|create|update|patch|delete,Developer namespace role core resources
+true,ai-dev,ai-developer,apps,deployments|replicasets|statefulsets,get|list|watch|create|update|patch|delete,Developer namespace role apps resources
+true,ai-test,ai-developer,,pods|pods/log|services|configmaps|secrets,get|list|watch|create|update|patch|delete,Developer namespace role core resources
+true,ai-test,ai-developer,apps,deployments|replicasets|statefulsets,get|list|watch|create|update|patch|delete,Developer namespace role apps resources
+true,ai-prod,ai-reader,,pods|pods/log|services|configmaps,get|list|watch,Production read-only role core resources
+true,ai-prod,ai-reader,apps,deployments|replicasets|statefulsets,get|list|watch,Production read-only role apps resources
+true,ai-dev,ai-operator,,pods|pods/log|services|events|configmaps,get|list|watch|create|update|patch|delete,Operator role core resources
+true,ai-dev,ai-operator,apps,deployments|replicasets|statefulsets|daemonsets,get|list|watch|create|update|patch|delete,Operator role apps resources
+true,ai-test,ai-operator,,pods|pods/log|services|events|configmaps,get|list|watch|create|update|patch|delete,Operator role core resources
+true,ai-test,ai-operator,apps,deployments|replicasets|statefulsets|daemonsets,get|list|watch|create|update|patch|delete,Operator role apps resources
+true,ai-prod,ai-operator,,pods|pods/log|services|events|configmaps,get|list|watch,Operator role production read mostly
+true,ai-prod,ai-operator,apps,deployments|replicasets|statefulsets|daemonsets,get|list|watch,Operator role production read mostly

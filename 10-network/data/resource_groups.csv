@@ -1,0 +1,2 @@
+resource_group_name,location,environment,owner,description
+rg-ai-network-krc,koreacentral,dev,platform,Network resource group for AI AKS lab.
