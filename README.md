@@ -185,7 +185,7 @@ flowchart TB
     class C,C1,C2,C3,C4,C5,C6,C7,C8 aks;
 
     class D,D1,D2,D3,D4,D5,D6,D7 rbac;
-
+```
 ## 3. 권한 모델
 
 이 프로젝트는 Entra ID 보안 그룹을 중심으로 권한을 나눕니다.
