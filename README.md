@@ -572,7 +572,6 @@ Users -> Entra ID security groups -> Azure RBAC / AKS Azure RBAC -> Kubernetes R
 Do not assign permissions directly to users. Assign permissions to groups and manage access through group membership.
 
 ## 2. Architecture
-![Uploading ChatGPT Image Jun 20, 2026, 09_05_30 AM.png…]()
 
 ```mermaid
 flowchart TB
