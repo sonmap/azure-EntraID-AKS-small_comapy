@@ -31,6 +31,8 @@ subscription_id = "<SUBSCRIPTION_ID>"
 Never publish values from your real Entra tenant or personal Azure account.
 
 ---
+<img width="1055" height="1491" alt="ChatGPT Image Jun 20, 2026, 09_05_23 AM" src="https://github.com/user-attachments/assets/4a6cc393-9809-41d8-a590-4fb25653b837" />
+
 
 # 한국어 문서
 
@@ -57,6 +59,7 @@ Never publish values from your real Entra tenant or personal Azure account.
 사용자에게 직접 권한을 부여하지 않고, 보안 그룹에 권한을 부여한 뒤 사용자를 그룹에 배치하는 구조입니다.
 
 ## 2. 전체 아키텍처
+<img width="1536" height="1024" alt="ChatGPT Image Jun 20, 2026, 09_05_30 AM" src="https://github.com/user-attachments/assets/4d2ed7b0-6d2e-4ccd-8be1-0b82359c7e03" />
 
 ```mermaid
 flowchart TB
@@ -569,6 +572,7 @@ Users -> Entra ID security groups -> Azure RBAC / AKS Azure RBAC -> Kubernetes R
 Do not assign permissions directly to users. Assign permissions to groups and manage access through group membership.
 
 ## 2. Architecture
+![Uploading ChatGPT Image Jun 20, 2026, 09_05_30 AM.png…]()
 
 ```mermaid
 flowchart TB
