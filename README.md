@@ -33,6 +33,8 @@ Never publish values from your real Entra tenant or personal Azure account.
 ---
 <img width="1055" height="1491" alt="ChatGPT Image Jun 20, 2026, 09_05_23 AM" src="https://github.com/user-attachments/assets/4a6cc393-9809-41d8-a590-4fb25653b837" />
 
+<img width="1055" height="1491" alt="ChatGPT Image Jun 20, 2026, 09_13_07 AM" src="https://github.com/user-attachments/assets/61b7b602-d449-447f-a077-0eda40492b60" />
+
 
 # 한국어 문서
 
@@ -653,51 +655,129 @@ Do not assign permissions directly to users. Assign permissions to groups and ma
 
 ```mermaid
 flowchart TB
-    A["00-entra-org<br/>Microsoft Entra ID"] --> B["10-network<br/>Azure Network"]
-    B --> C["20-aks<br/>AKS Platform"]
-    C --> D["30-aks-rbac<br/>Kubernetes RBAC"]
 
-    A --> A1["30 users"]
-    A --> A2["10 security groups"]
-    A --> A3["Group memberships"]
-    A --> A4["Azure RBAC assignments"]
-    A --> A5["Group object ID outputs"]
+    %% =========================
+    %% Main Vertical Flow
+    %% =========================
 
-    B --> B1["Resource Group"]
-    B --> B2["Virtual Network"]
-    B --> B3["AKS system subnet"]
-    B --> B4["AKS user subnet"]
-    B --> B5["Ingress subnet"]
-    B --> B6["Private endpoint subnet"]
-    B --> B7["NSG rules"]
+    subgraph S00["00-entra-org<br/>Entra ID Organization Setup"]
+        direction TB
+        A["00-entra-org<br/>Entra ID Organization Setup"]
+        A1["Create 30 Users"]
+        A2["Create 10 Security Groups"]
+        A3["Configure 82 Group Memberships"]
+        A4["Assign Azure RBAC Roles"]
+        A5["Output Group Object IDs"]
 
-    C --> C1["AKS resource group"]
-    C --> C2["Azure Container Registry"]
-    C --> C3["Log Analytics Workspace"]
-    C --> C4["AKS cluster"]
-    C --> C5["System node pool"]
-    C --> C6["User node pool"]
-    C --> C7["AKS Azure RBAC"]
-    C --> C8["ACR Pull"]
+        A --> A1
+        A1 --> A2
+        A2 --> A3
+        A3 --> A4
+        A4 --> A5
+    end
 
-    D --> D1["Namespace: ai-dev"]
-    D --> D2["Namespace: ai-test"]
-    D --> D3["Namespace: ai-prod"]
-    D --> D4["Developer RoleBinding"]
-    D --> D5["Operator RoleBinding"]
-    D --> D6["Reader RoleBinding"]
-    D --> D7["Security RoleBinding"]
+    subgraph S10["10-network<br/>Azure Network Setup"]
+        direction TB
+        B["10-network<br/>Azure Network Setup"]
+        B1["Resource Group<br/>rg-ai-network-krc"]
+        B2["VNet<br/>vnet-ai-dev-krc"]
+        B3["Subnet<br/>snet-aks-system"]
+        B4["Subnet<br/>snet-aks-user"]
+        B5["Subnet<br/>snet-ingress"]
+        B6["Subnet<br/>snet-private-endpoint"]
+        B7["NSG / NSG Rules"]
 
-    A5 --> C7
-    A5 --> D4
-    A5 --> D5
-    A5 --> D6
-    A5 --> D7
+        B --> B1
+        B1 --> B2
+        B2 --> B3
+        B3 --> B4
+        B4 --> B5
+        B5 --> B6
+        B6 --> B7
+    end
 
-    B3 --> C5
-    B4 --> C6
+    subgraph S20["20-aks<br/>AKS Cluster Deployment"]
+        direction TB
+        C["20-aks<br/>AKS Cluster Deployment"]
+        C1["Resource Group<br/>rg-ai-aks-krc"]
+        C2["ACR<br/>acraidevkrc001"]
+        C3["Log Analytics<br/>log-ai-aks-dev-krc"]
+        C4["AKS Cluster<br/>aks-ai-dev-krc"]
+        C5["System Node Pool<br/>Standard_E2bds_v5"]
+        C6["User Node Pool<br/>aiuser"]
+        C7["AKS Azure RBAC"]
+        C8["ACR Pull Permission"]
+
+        C --> C1
+        C1 --> C2
+        C2 --> C3
+        C3 --> C4
+        C4 --> C5
+        C5 --> C6
+        C6 --> C7
+        C7 --> C8
+    end
+
+    subgraph S30["30-aks-rbac<br/>Kubernetes RBAC / Namespace Setup"]
+        direction TB
+        D["30-aks-rbac<br/>Kubernetes RBAC Setup"]
+        D1["Namespace<br/>ai-dev"]
+        D2["Namespace<br/>ai-test"]
+        D3["Namespace<br/>ai-prod"]
+        D4["RoleBinding<br/>Developers"]
+        D5["RoleBinding<br/>Operators"]
+        D6["RoleBinding<br/>Readers"]
+        D7["RoleBinding<br/>Security"]
+
+        D --> D1
+        D1 --> D2
+        D2 --> D3
+        D3 --> D4
+        D4 --> D5
+        D5 --> D6
+        D6 --> D7
+    end
+
+    %% =========================
+    %% Stage Flow
+    %% =========================
+
+    A5 --> B
+    B7 --> C
+    C8 --> D
+
+    %% =========================
+    %% Cross Dependencies
+    %% =========================
+
+    A5 -. "Group Object IDs" .-> C7
+    A5 -. "Group Object IDs" .-> D4
+    A5 -. "Group Object IDs" .-> D5
+    A5 -. "Group Object IDs" .-> D6
+    A5 -. "Group Object IDs" .-> D7
+
+    B3 -. "System Subnet ID" .-> C5
+    B4 -. "User Subnet ID" .-> C6
+
+    %% =========================
+    %% Styles
+    %% =========================
+
+    classDef entra fill:#e8f1ff,stroke:#1f5fbf,stroke-width:2px,color:#000;
+    classDef network fill:#eaf7ea,stroke:#2f8f3a,stroke-width:2px,color:#000;
+    classDef aks fill:#f0ebff,stroke:#6b46c1,stroke-width:2px,color:#000;
+    classDef rbac fill:#fff0e6,stroke:#d97706,stroke-width:2px,color:#000;
+    classDef output fill:#fff8dc,stroke:#b8860b,stroke-width:2px,color:#000;
+
+    class A,A1,A2,A3,A4 entra;
+    class A5 output;
+
+    class B,B1,B2,B3,B4,B5,B6,B7 network;
+
+    class C,C1,C2,C3,C4,C5,C6,C7,C8 aks;
+
+    class D,D1,D2,D3,D4,D5,D6,D7 rbac;
 ```
-
 ## 3. Deployment Order
 
 ```text
